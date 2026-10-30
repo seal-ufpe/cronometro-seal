@@ -1,0 +1,30 @@
+:root {
+  /* oficiais SEAL */
+  --background: #fffaef;
+  --foreground: #171717;
+  --primary-blue: #050a57;
+  --primary-pink: #f99d9d;
+  --secondary-pink: #c07a7a;
+  --accent-text: #9b4f4f;
+  --white: #fff;
+  --black: #000;
+
+  /* derivados da paleta SEAL para o efeito liquid glass */
+  --blue-glow: color-mix(in oklab, var(--primary-blue) 45%, white);
+  --blue-mid: color-mix(in oklab, var(--primary-blue) 70%, white);
+  --glass-tint-strong: color-mix(in srgb, var(--primary-blue) 72%, transparent);
+  --glass-tint-weak: color-mix(in srgb, var(--blue-mid) 28%, transparent);
+  --glass-border: color-mix(in srgb, var(--white) 38%, transparent);
+  --glass-highlight: color-mix(in srgb, var(--white) 55%, transparent);
+  --glass-shadow: color-mix(in srgb, var(--black) 35%, transparent);
+  --glass-blur: clamp(16px, 2.4vmin, 32px);
+  --font-sans: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: ui-monospace, 'JetBrains Mono', monospace;
+  --radius: clamp(20px, 4vmin, 36px);
+  --space-unit: clamp(4px, 1vmin, 8px);
+  --page-background: var(--background);
+}
+
+:root[data-theme='dark'] {
+  --page-background: color-mix(in srgb, var(--black) 82%, var(--primary-blue));
+}
